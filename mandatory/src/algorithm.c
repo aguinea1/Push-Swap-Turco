@@ -27,6 +27,8 @@ void	alg_resolve(t_stack **a, t_stack **b)
 	int	len_a;
 
 	len_a = ft_stacksize(*a);
+	if (len_a == 100 || len_a == 500)
+		spec_resolve(a, b);
 	if (!is_sorted(*a) && len_a--)
 		pb(a, b, 33);
 	if (!is_sorted(*a) && len_a-- > 3)

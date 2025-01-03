@@ -21,6 +21,7 @@
 typedef struct s_stack
 {
 	long			nbr;
+	int				chunk;
 	bool			above_median;
 	bool			cheapest;
 	bool			above;
