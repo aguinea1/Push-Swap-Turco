@@ -6,7 +6,7 @@
 /*   By: aguinea <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 17:53:01 by aguinea           #+#    #+#             */
-/*   Updated: 2024/12/03 15:42:43 by aguinea          ###   ########.fr       */
+/*   Updated: 2025/01/07 13:30:08 by aguinea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 typedef struct s_stack
 {
+	int				order;
 	long			nbr;
 	int				chunk;
 	bool			above_median;
@@ -85,4 +86,15 @@ void	min_top(t_stack **a);
 t_stack	*median_position(t_stack *a);
 t_stack	*get_cheapest(t_stack *stack);
 void	def_push(t_stack **stack, t_stack *cheapest_node, int flag);
+
+//RESOLVING FOR 500 NUMS WITH CHUNKS
+void		spec_resolve(t_stack **a, t_stack **b);
+void		resolve100(t_stack *a, t_stack *b);
+void		order_stack_b(t_stack **a, t_stack **b, t_stack *lower);
+void		chuncks_num(t_stack *a, int divison, int flag);
+t_stack		*verify_upper_or_lower(t_stack *a, int chunk, int flag);
+t_stack		*chunks_cost(t_stack *upper, t_stack *lower, int len);
+int			left_chunk(t_stack *a, int chunk);
+void	order_nums(t_stack *a, int i, int size, t_stack *node);
+void	smallest_nbr(t_stack *a);
 #endif

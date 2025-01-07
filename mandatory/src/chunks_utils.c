@@ -6,9 +6,12 @@
 /*   By: aguinea <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 23:45:46 by aguinea           #+#    #+#             */
-/*   Updated: 2024/12/03 15:38:02 by aguinea          ###   ########.fr       */
+/*   Updated: 2025/01/07 13:25:53 by aguinea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../include/push_swap.h"
+#include "../libft/libft.h"
 
 void    chuncks_num(t_stack *a, int divison, int flag)
 {
@@ -18,12 +21,12 @@ void    chuncks_num(t_stack *a, int divison, int flag)
 
     i = 0;
     k = 1;
-    head = *a;
+    head = a;
     while (flag >= i)
     {
-        while (head->chunk == 0)
+        while (1)
         {
-            if (head->index < divison * k && head->index > divison * (k - 1))
+            if (head->order < divison * k && head->order >= divison * (k - 1))
                 head->chunk = k;
             k++;
         }
@@ -32,29 +35,27 @@ void    chuncks_num(t_stack *a, int divison, int flag)
     }
 }
 
-t_stack    verify_upper_or_lower(t_stack *a, int chunk, int flag)
+t_stack    *verify_upper_or_lower(t_stack *a, int chunk, int flag)
 {
-    t_stack *head;
     t_stack *first;
     t_stack *last;
+	int		index;
 
-    head = *a;
+    first = a;
+	index = ft_stacksize(a);
     if (flag == 1)
     {
-        while (head->index < index / 2)
+        while (first->index < index / 2)
         {
-            if (head->chunk == chunk)
-            {
-                first = head;
+            if (first->chunk == chunk)
                 return (first);
-            }
-            head = head->next;
+            first = first->next;
         }
     }
     else
     {
-        last = ft_lastnode(*a);
-        while (last->index < index / 2)
+        last = ft_lastnode(a);
+		while (last->index > index / 2)
         {
             if (last->chunk == chunk)
             {
@@ -67,7 +68,7 @@ t_stack    verify_upper_or_lower(t_stack *a, int chunk, int flag)
     return (first);
 }
 
-void    chunks_cost(t_stack *upper, t_stack *lower, int len)
+t_stack	*chunks_cost(t_stack *upper, t_stack *lower, int len)
 {
     if (upper->above_median)
         upper->push_cost = upper->index;

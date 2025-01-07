@@ -6,7 +6,7 @@
 /*   By: aguinea <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 17:46:08 by aguinea           #+#    #+#             */
-/*   Updated: 2024/12/03 15:43:33 by aguinea          ###   ########.fr       */
+/*   Updated: 2025/01/07 12:23:31 by aguinea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	alg_sort(t_stack **a, t_stack **b, int ac)
 	}
 	else
 		alg_resolve(a, b);
+	print(*b);
 	free(b);
 	return ;
 }

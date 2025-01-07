@@ -6,7 +6,7 @@
 #    By: aguinea <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/23 12:22:41 by aguinea           #+#    #+#              #
-#    Updated: 2024/12/05 22:00:35 by aguinea          ###   ########.fr        #
+#    Updated: 2025/01/07 11:53:05 by aguinea          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,7 +94,9 @@ SRCS 			= $(SRC_DIR)/main.c						\
 				  $(SRC_DIR)/algorithm.c 				\
 				  $(SRC_DIR)/fill_parameters_to_pb.c 	\
 				  $(SRC_DIR)/prepare_to_push.c 			\
-				  $(SRC_DIR)/fill_parameters_to_pa.c
+				  $(SRC_DIR)/fill_parameters_to_pa.c	\
+				  $(SRC_DIR)/chunks_resolve.c			\
+				  $(SRC_DIR)/chunks_utils.c
 
 SHARED_SRCS		= $(SHARED)/parsing.c			\
 				  $(SHARED)/push_swap_utils.c	\

@@ -6,7 +6,7 @@
 /*   By: aguinea <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 23:45:46 by aguinea           #+#    #+#             */
-/*   Updated: 2024/12/03 15:38:02 by aguinea          ###   ########.fr       */
+/*   Updated: 2025/01/07 11:58:46 by aguinea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	alg_resolve(t_stack **a, t_stack **b)
 
 	len_a = ft_stacksize(*a);
 	if (len_a == 100 || len_a == 500)
-		spec_resolve(a, b);
+		return (spec_resolve(a, b));
 	if (!is_sorted(*a) && len_a--)
 		pb(a, b, 33);
 	if (!is_sorted(*a) && len_a-- > 3)
