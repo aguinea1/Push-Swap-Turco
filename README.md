@@ -35,12 +35,12 @@ You can only use this movements:
 	❖ Push a (pa) » Takes the first number on stack A and places it on top of Stack B:
                   A     B        A     B   
                  |1|   |5|  →   |5|   |4|
-		 |2|   |4|  →   |1|   |3|
+                 |2|   |4|  →   |1|   |3|
                        |3|      |2|
 	❖ Push b (pb) » Takes the first number on stack B and places it on top of Stack A:
                   A     B        A     B   
                  |1|   |5|  →   |2|   |1|
-		 |2|   |4|  →   |3|   |5|
+                 |2|   |4|  →   |3|   |5|
                                       |4|
 	❖ Rotate a (ra) » Shift all the elements in the stack up by one position, making the first element move to the last position (only on the stack A):
                         A
@@ -59,13 +59,22 @@ You can only use this movements:
                     |3| → |1|      |6| → |4|
 
 	❖ Reverse Rotate a (rra) » Shift all the elements in the stack down by one position, making the last element move to the top (only on the stack A):
-                       A
-                   |1| → |3|
-                   |2| → |1|
-                   |3| → |2|
+                        A
+                    |1| → |3|
+                    |2| → |1|
+                    |3| → |2|
 
     ❖ Reverse Rotate a (rrb) » Shift all the elements in the stack down by one position, making the last element move to the top (only on the stack B):
-                      B
-                  |1| → |3|
-                  |2| → |1|
-                  |3| → |2|
+                        B
+                    |1| → |3|
+                    |2| → |1|
+                    |3| → |2|
+
+      ❖ Reverse rotate a && Reverse rotate b (rrr) » Does both rotates at the same time and only counts as one movement:
+                        A              B
+                    |1| → |3|      |4| → |6|
+                    |2| → |1|      |5| → |4|
+                    |3| → |2|      |6| → |5|
+
+---
+
