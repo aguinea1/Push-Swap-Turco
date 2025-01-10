@@ -64,17 +64,46 @@ You can only use this movements:
                     |2| → |1|
                     |3| → |2|
 
-    ❖ Reverse Rotate a (rrb) » Shift all the elements in the stack down by one position, making the last element move to the top (only on the stack B):
+    	❖ Reverse Rotate a (rrb) » Shift all the elements in the stack down by one position, making the last element move to the top (only on the stack B):
                         B
                     |1| → |3|
                     |2| → |1|
                     |3| → |2|
 
-      ❖ Reverse rotate a && Reverse rotate b (rrr) » Does both rotates at the same time and only counts as one movement:
+      	❖ Reverse rotate a && Reverse rotate b (rrr) » Does both rotates at the same time and only counts as one movement:
                         A              B
                     |1| → |3|      |4| → |6|
                     |2| → |1|      |5| → |4|
                     |3| → |2|      |6| → |5|
 
 ---
+## › My Format
+</h1>
+I decided to do it with a list, that has a pointer to the next node and other to the previous node but it's not a circular list, so the ¨previous pointer¨ from the first node points to NULL, the same with the ¨next pointer¨ of the las node.
+NOTE : Each node contains the number according to the order in which they have been placed in the output.
+---
+## › Turkish Algorithm
+</h1>
+One of the most used algorithms to get a 125/125 (the highest score) is the Turkish/Turco algorithm:
+
+	❖ First, if the program recives 3 or less numbers you have to sort the numbers manually, (sort_three or sort_two funcitons).
+ 	❖ If it's more than 3 numbers you have to apply the Turkish/Turco algorithm:
+  		◇ First of all you have to do to PBs
+    		◇ From there, each node of stack A will point to another node in stack B in such a way that all nodes in stack A will have a "target node" in stack B.
+      		◇ The target node will be selected by targeting the node in Stack B with the number inmediatly lower of the number in the node from Stack A, and if you have a node in Stack A with a smaller number than every number in Stack B it will automatically target the biggest number in Stack B.
+      		◇ Then, the "push cost" must be calculated, which is the number of moves it would take to push a node (from Stack A) and its target node (from Stack B). Among all combinations, the combination of nodes with the lowest "cost" (least number of moves) should be selected. Then, a push operation (pb) is performed, and the two numbers are merged into Stack B.
+		◇ So, every time you do a pb you have to refresh the targets, because they'll probably change.
+  		◇ The algorithm, will repeat the process until stack A have only 3 numbers, that it must be sortd with the sort_three function.
+    		◇ And the last thing, will be about finding targets in reverse, but this time looking for the node in Stack A with the immediately larger number compared to the node in Stack B. If there is a number in Stack B that is higher than any of the numbers in Stack A, its target will point to the node with the smallest number.
+---
+
+
+	
+
+
+
+
+
+
+
 
