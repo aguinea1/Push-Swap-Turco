@@ -78,8 +78,10 @@ You can only use this movements:
 ## › My Format
 </h1>
 I decided to do it with a list, that has a pointer to the next node and other to the previous node but it's not a circular list, so the ¨previous pointer¨ from the first node points to NULL, the same with the ¨next pointer¨ of the las node.
-NOTE : Each node contains the number according to the order in which they have been placed in the output.
+
+ > NOTE: Each node contains the number according to the order in which they have been placed in the output.
 ---
+
 ## › Turkish Algorithm
 </h1>
 One of the most used algorithms to get a 125/125 (the highest score) is the Turkish/Turco algorithm:
