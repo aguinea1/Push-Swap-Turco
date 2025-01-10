@@ -4,8 +4,6 @@
 </h1>
 Push Swap it's an algorithm project where you receive between 2 and an infinite quantity of numbers and the goal is to return all the numbers in order with the minimum number of movements (the less, the better). You have to columns (Stack A & Stack B), that you can use to sort the numbers
 
-
-> Here is an .
 ---
 ## › Instruction set
 </h1>
