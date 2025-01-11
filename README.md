@@ -88,7 +88,7 @@ One of the most used algorithms to get a 125/125 (the highest score) is the Turk
 
 	❖ First, if the program recives 3 or less numbers you have to sort the numbers manually, (sort_three or sort_two funcitons).
  	❖ If it's more than 3 numbers you have to apply the Turkish/Turco algorithm:
-  		◇ First of all you have to do to PBs
+  		◇ First of all you have to do two PBs
     		◇ From there, each node of stack A will point to another node in stack B in such a way that all nodes in stack A will have a "target node" in stack B.
       		◇ The target node will be selected by targeting the node in Stack B with the number inmediatly lower of the number in the node from Stack A, and if you have a node in Stack A with a smaller number than every number in Stack B it will automatically target the biggest number in Stack B.
       		◇ Then, the "push cost" must be calculated, which is the number of moves it would take to push a node (from Stack A) and its target node (from Stack B). Among all combinations, the combination of nodes with the lowest "cost" (least number of moves) should be selected. Then, a push operation (pb) is performed, and the two numbers are merged into Stack B.
