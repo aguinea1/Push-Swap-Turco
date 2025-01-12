@@ -202,13 +202,12 @@ One of the most used algorithms to get a 125/125 (the highest score) is the Turk
                                                                                                          |    6    |    |         |
                                                                                                          +---------+    +---------+
              Stack A        Stack B                        Stack A        Stack B                          Stack A        Stack B
-
-      
-
-
-
-
-
-
-
-
+---
+## › Visualizer
+The visualizer, represents the behavior of the algorithm you apply. [(VISUALIZER GITHUB)](https://github.com/o-reo/push_swap_visualizer).
+<h1 align="center"> 
+	PUSH SWAP - BONUS
+ </h1>
+The bonus part of this project can only be done if you achieve a 100/100 on the mandatory part, and it consists of replicating the behavior of a part of the checker, specifically:
+	◇ Your executable must accept numbers as input (./checker 2 1), where you must output the moves (e.g., sa in this case) directly to the terminal (STDOUT_FILENO). When pressing Ctrl + D, the checker should display OK or KO depending on whether the numbers are sorted or not.
+	
