@@ -88,7 +88,8 @@ One of the most used algorithms to get a 125/125 (the highest score) is the Turk
 
 	❖ First, if the program recives 3 or less numbers you have to sort the numbers manually, (sort_three or sort_two funcitons).
 	❖ If it's more than 3 numbers you have to apply the Turkish/Turco algorithm:
-  		◇ First of all you have to do two PBs
+  		◇ First of all you have to do two PBs:
+    
                   +---------+   +---------+                +---------+   +---------+
                   |    1    |   |         |                |    6    |   |    5    |
                   |---------|   |         |                |---------|   |---------|      
@@ -103,6 +104,7 @@ One of the most used algorithms to get a 125/125 (the highest score) is the Turk
                   |    2    |   |         |
                   +---------+   +---------+
                     Stack A       Stack B
+		    
     	◇ From there, each node of stack A will point to another node in stack B in such a way that all nodes in stack A will have a "target node" in stack B.
       	◇ The target node will be selected by targeting the node in Stack B with the number inmediatly lower of the number in the node from Stack A, and if you have a node in Stack A with a smaller number than every number in Stack B it will automatically target the biggest number in Stack B. In this Example:
 
@@ -121,7 +123,6 @@ One of the most used algorithms to get a 125/125 (the highest score) is the Turk
       	◇ Then, the "push cost" must be calculated, which is the number of moves it would take to put a node on top of Stack and pushi it to Stack B and put on top of Stack B its target node.(So, when you push the node in Stack A to Stack B, that node and its target will be together). Among all combinations, the combination of nodes with the lowest "cost" (least number of moves) should be selected. Then, a push operation (pb) is performed, and the two numbers are merged into Stack B.
 		->In this case the ¨cheapest¨ combination to push it's 6 and it's target 5, because that action it only takes 1 movement(pb).
 
-                    
                     +---------+    +---------+                                    +---------+    +---------+
                     |    6    |    |    5    |                                    |    3    |    |    6    |
                     |---------|    |---------|                                    |---------|    |---------|
@@ -183,8 +184,7 @@ One of the most used algorithms to get a 125/125 (the highest score) is the Turk
                             +---------+                                  |---------| 
                                                                          |    4    |
                                                                          +---------+
-			      Stack A        Stack B                       Stack A        Stack B  
-
+                              Stack A        Stack B                       Stack A        Stack B  
 
 	◇ And now the 1 has as target the 2, which push cost is 3 (2 ra, and a pa):
 
@@ -201,7 +201,7 @@ One of the most used algorithms to get a 125/125 (the highest score) is the Turk
             +---------+                                  +---------+                                     |---------|    |         | 
                                                                                                          |    6    |    |         |
                                                                                                          +---------+    +---------+
-	     Stack A        Stack B                        Stack A        Stack B                          Stack A        Stack B
+             Stack A        Stack B                        Stack A        Stack B                          Stack A        Stack B
 
       
 
