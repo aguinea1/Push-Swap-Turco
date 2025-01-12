@@ -90,24 +90,72 @@ One of the most used algorithms to get a 125/125 (the highest score) is the Turk
 	❖ If it's more than 3 numbers you have to apply the Turkish/Turco algorithm:
   		◇ First of all you have to do two PBs
                   +---------+   +---------+                +---------+   +---------+
-                  |    1    |   |         |                |    2    |   |    3    |
+                  |    1    |   |         |                |    6    |   |    5    |
                   |---------|   |         |                |---------|   |---------|      
-                  |    3    |   |         |                |    5    |   |    1    |
+                  |    5    |   |         |                |    3    |   |    1    |
                   |---------|   |         |                |---------|   +---------+
-                  |    2    |   |         |      ======>   |    4    |
+                  |    6    |   |         |      ======>   |    4    |
+                  |---------|   |         |                |---------|
+                  |    5    |   |         |                |    2    |  
                   |---------|   |         |                +---------+ 
-                  |    5    |   |         |                  Stack A       Stack B
+                  |    4    |   |         |                  Stack A       Stack B
                   |---------|   |         |
-                  |    4    |   |         |
+                  |    2    |   |         |
                   +---------+   +---------+
                     Stack A       Stack B
     	◇ From there, each node of stack A will point to another node in stack B in such a way that all nodes in stack A will have a "target node" in stack B.
-      		◇ The target node will be selected by targeting the node in Stack B with the number inmediatly lower of the number in the node from Stack A, and if you have a node in Stack A with a smaller number than every number in Stack B it will automatically target the biggest number in Stack B.
-      		◇ Then, the "push cost" must be calculated, which is the number of moves it would take to push a node (from Stack A) and its target node (from Stack B). Among all combinations, the combination of nodes with the lowest "cost" (least number of moves) should be selected. Then, a push operation (pb) is performed, and the two numbers are merged into Stack B.
+      		◇ The target node will be selected by targeting the node in Stack B with the number inmediatly lower of the number in the node from Stack A, and if you have a node in Stack A with a smaller number than every number in Stack B it will automatically target the biggest number in Stack B. In this Example:
+
+                                    +-----------------+------------------+
+                                    | Node in Stack A | It's target in B |
+                                    +-----------------+------------------+
+                                    |         6       |         5        |
+                                    +-----------------+------------------+
+                                    |         3       |         1        |
+                                    +-----------------+------------------+
+                                    |         4       |         1        |
+                                    +-----------------+------------------+
+                                    |         2       |         1        |
+                                    +-----------------+------------------+
+				    
+      		◇ Then, the "push cost" must be calculated, which is the number of moves it would take to put a node on top of Stack and pushi it to Stack B and put on top of Stack B its target node.(So, when you push the node in Stack A to Stack B, that node and its target will be together). Among all combinations, the combination of nodes with the lowest "cost" (least number of moves) should be selected. Then, a push operation (pb) is performed, and the two numbers are merged into Stack B.
+	->In this case the ¨cheapest¨ combination to push it's 6 and it's target 5, because that action it only takes 1 movement(pb).
+
+                    
+                    +---------+    +---------+                                    +---------+    +---------+
+                    |    6    |    |    5    |                                    |    3    |    |    6    |
+                    |---------|    |---------|                                    |---------|    |---------|
+                    |    5    |    |    1    |          ======>                   |    4    |    |    5    |
+                    |---------|    +---------+                                    |---------|    |---------|
+                    |    4    |                                                   |    2    |    |    1    |
+                    |---------|                                                   +---------+    +---------+ 
+                    |    2    |                                                     Stack A        Stack B
+		    +---------+                                                  
+                     Stack A        Stack B                                          
+
 		◇ So, every time you do a pb you have to refresh the targets, because they'll probably change.
-  		◇ The algorithm, will repeat the process until stack A have only 3 numbers, that it must be sortd with the sort_three function.
-    		◇ And the last thing, will be about finding targets in reverse, but this time looking for the node in Stack A with the immediately larger number compared to the node in Stack B. If there is a number in Stack B that is higher than any of the numbers in Stack A, its target will point to the node with the smallest number.
----
+  		◇ The algorithm, will repeat the process until stack A have only 3 numbers, that it must be sorted with a sort_three function (manually). In this case the sort three it's done with just rra.
+    
+                            +---------+    +---------+                   +---------+    +---------+
+	                    |    3    |    |    6    |                   |    2    |    |    6    |
+                            |---------|    |---------|                   |---------|    |---------|
+                            |    4    |    |    5    |        ======>    |    3    |    |    5    |
+                            |---------|    |---------|                   |---------|    |---------|
+                            |    2    |    |    1    |                   |    4    |    |    1    |
+                            +---------+    +---------+                   +---------+    +---------+   
+                              Stack A        Stack B                       Stack A        Stack B
+
+               ◇ And the last thing, will be about finding targets in reverse, but this time looking for the node in Stack A with the immediately bigger number compared to the node in Stack B. If there is a number in Stack B that is higher than any of the numbers in Stack A, its target will point to the node with the smallest number.
+
+                                    +-----------------+------------------+
+                                    | Node in Stack B | It's target in A |
+                                    +-----------------+------------------+
+                                    |         6       |         2        |
+                                    +-----------------+------------------+
+                                    |         5       |         2        |
+                                    +-----------------+------------------+
+                                    |         1       |         2        |
+                                    +-----------------+------------------+
 
 
 	
