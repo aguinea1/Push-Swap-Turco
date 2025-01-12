@@ -203,8 +203,11 @@ One of the most used algorithms to get a 125/125 (the highest score) is the Turk
                                                                                                          +---------+    +---------+
              Stack A        Stack B                        Stack A        Stack B                          Stack A        Stack B
 ---
+
+ </h1>
 ## › Visualizer
 The visualizer, represents the behavior of the algorithm you apply. [(VISUALIZER GITHUB)](https://github.com/o-reo/push_swap_visualizer).
+---
 <h1 align="center"> 
 	PUSH SWAP - BONUS
  </h1>
