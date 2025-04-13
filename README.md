@@ -1,7 +1,14 @@
- [<img src="https://img.shields.io/badge/42-000000.svg?style=for-the-badge&logo=42&logoColor=white"/>](https://profile.intra.42.fr/users/aguinea)
 <h1 align="center">
 	PUSH SWAP
-</h1>
+ </h1>
+
+<p align="center">
+	<img src="https://img.shields.io/badge/Language-C-blue?style=flat-square"/>
+	<img src="https://img.shields.io/badge/Stacks-A%20%26%20B-yellow?style=flat-square"/>
+	<img src="https://img.shields.io/badge/500%20Numbers-4150%20Moves-brightgreen?style=flat-square"/>
+</p>
+
+---
 Push Swap it's an algorithm project where you receive between 2 and an infinite quantity of numbers and the goal is to return all the numbers in order with the minimum number of movements (the less, the better). You have to columns (Stack A & Stack B), that you can use to sort the numbers
 
 ---
@@ -213,4 +220,16 @@ The visualizer, represents the behavior of the algorithm you apply. [(VISUALIZER
  </h1>
 The bonus part of this project can only be done if you achieve a 100/100 on the mandatory part, and it consists of replicating the behavior of a part of the checker, specifically:
 	◇ Your executable must accept numbers as input (./checker 2 1), where you must output the moves (e.g., sa in this case) directly to the terminal (STDOUT_FILENO). When pressing Ctrl + D, the checker should display OK or KO depending on whether the numbers are sorted or not.
-	
+
+ ---
+
+## 📫 Contact
+
+Feel free to reach out or explore more of my work:
+
+[<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/aitor-guinea-961635348/)
+[<img src="https://img.shields.io/badge/GitHub-aguinea1-black?style=flat-square&logo=github"/>](https://github.com/aguinea1)
+[<img src="https://img.shields.io/badge/Email-aguinea1@gmail.com-red?style=flat-square&logo=gmail&logoColor=white"/>](mailto:aguinea1@gmail.com)
+
+---
+⭐
