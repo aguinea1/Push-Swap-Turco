@@ -5,7 +5,6 @@
 <p align="center">
 	<img src="https://img.shields.io/badge/Language-C-blue?style=flat-square"/>
 	<img src="https://img.shields.io/badge/Stacks-A%20%26%20B-yellow?style=flat-square"/>
-	<img src="https://img.shields.io/badge/500%20Numbers-4150%20Moves-brightgreen?style=flat-square"/>
 </p>
 
 ---
@@ -229,7 +228,7 @@ Feel free to reach out or explore more of my work:
 
 [<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/aitor-guinea-961635348/)
 [<img src="https://img.shields.io/badge/GitHub-aguinea1-black?style=flat-square&logo=github"/>](https://github.com/aguinea1)
-[<img src="https://img.shields.io/badge/Email-aguinea1@gmail.com-red?style=flat-square&logo=gmail&logoColor=white"/>](mailto:aguinea1@gmail.com)
+[<img src="https://img.shields.io/badge/Email-guineaitor36@gmail.com-red?style=flat-square&logo=gmail&logoColor=white"/>](mailto:guineaitor36@gmail.com)
 
 ---
 ⭐
